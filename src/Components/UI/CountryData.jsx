@@ -66,9 +66,9 @@ export const CountryData = () => {
 
   return (
     <div>
-      {/* <div className="pokemon-search">
+      <div className="pokemon-search">
         <input type="text" placeholder="Search Country" value={search} onChange={(e)=> setSearch(e.target.value)}/>
-      </div> */}
+      </div>
       <ul className="cards">
         {/* {data.map((curElem) => ( */}
         {searchData.map((curElem) => (

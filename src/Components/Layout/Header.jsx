@@ -11,12 +11,12 @@ export const Header = () =>{
             </div>
 
             <div className="header-search">
-                <input
+                {/* <input
                 type="text"
                 placeholder="Search Country..."
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                />
+                /> */}
             </div>
         </header>
 
