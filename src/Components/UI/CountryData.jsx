@@ -1,9 +1,13 @@
 // import { useEffect, useState } from "react"
+import { useState } from "react";
 import { CountryCards } from "./CountryCards"
 import { useQuery } from "@tanstack/react-query";
 
 
 export const CountryData = () => {
+
+  const [search , setSearch] = useState("")
+
 
   const countryDetails =
     "https://restcountries.com/v3.1/all?fields=name,capital,flags,population,cca2";
@@ -38,6 +42,17 @@ export const CountryData = () => {
     queryKey: ["countries"],
     queryFn: fetchCountries,
   });
+  
+
+
+  //SEARCH FUNCTIONALITY
+  const searchData = (data || []).filter((curCountry) =>
+    curCountry.name.common
+      .toLowerCase()
+      .includes(search.toLowerCase())
+  );
+
+
 
   // Loading state
   if (isLoading) {
@@ -51,8 +66,12 @@ export const CountryData = () => {
 
   return (
     <div>
+      {/* <div className="pokemon-search">
+        <input type="text" placeholder="Search Country" value={search} onChange={(e)=> setSearch(e.target.value)}/>
+      </div> */}
       <ul className="cards">
-        {data.map((curElem) => (
+        {/* {data.map((curElem) => ( */}
+        {searchData.map((curElem) => (
           <CountryCards
             key={curElem.name.common}
             curElem={curElem}

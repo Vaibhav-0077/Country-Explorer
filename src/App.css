@@ -14,6 +14,77 @@ body {
   background-color: #eff3ff;
 }
 
+
+/*==== //HEADER ========== */
+.app-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 18px 20px;
+  background-color: #0f172a;
+  margin-bottom: 50px;
+}
+
+.logo {
+  position: absolute;
+  left: 20px;
+}
+
+.logo h2 {
+  color: white;
+  font-size: 22px;
+  margin: 0;
+}
+
+.header-search input {
+  width: 320px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+}
+
+@media (max-width: 768px) {
+
+  .app-header {
+    justify-content: space-between; /* distribute properly */
+    padding: 10px 15px;
+  }
+
+  .logo {
+    position: static;   /* 🔥 REMOVE absolute */
+  }
+
+  .logo h2 {
+    font-size: 14px;
+  }
+
+  .header-search input {
+    width: 100px;
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .app-header {
+    padding: 10px;
+  }
+
+  .logo h2 {
+    font-size: 14px;
+  }
+
+  .header-search input {
+    max-width: 140px;   /* 🔥 critical fix for 360px */
+    font-size: 12px;
+    padding: 6px 8px;
+  }
+}
+/* ================================= */
+
 h1,
 h2,
 h3,
