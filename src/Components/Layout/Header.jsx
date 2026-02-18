@@ -1,8 +1,4 @@
-import { useState } from "react"
-
-export const Header = () =>{
-
-    const [search , setSearch] = useState("")
+export const Header = ({search , setSearch}) =>{
 
     return(
         <header className="app-header">
@@ -11,12 +7,12 @@ export const Header = () =>{
             </div>
 
             <div className="header-search">
-                {/* <input
+                <input
                 type="text"
                 placeholder="Search Country..."
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                /> */}
+                />
             </div>
         </header>
 

@@ -2,11 +2,15 @@
 import { useState } from "react";
 import { CountryCards } from "./CountryCards"
 import { useQuery } from "@tanstack/react-query";
+import { useOutletContext } from "react-router-dom";
+
 
 
 export const CountryData = () => {
 
-  const [search , setSearch] = useState("")
+  // const [search , setSearch] = useState("")
+
+  const { search , setSearch } = useOutletContext();
 
 
   const countryDetails =
@@ -66,9 +70,9 @@ export const CountryData = () => {
 
   return (
     <div>
-      <div className="pokemon-search">
+      {/* <div className="pokemon-search">
         <input type="text" placeholder="Search Country" value={search} onChange={(e)=> setSearch(e.target.value)}/>
-      </div>
+      </div> */}
       <ul className="cards">
         {/* {data.map((curElem) => ( */}
         {searchData.map((curElem) => (

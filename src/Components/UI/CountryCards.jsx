@@ -10,7 +10,14 @@ export const CountryCards = ({curElem , onSelect}) =>{
             <figure>
                 <img src={curElem.flags.svg} alt={curElem.flags.alt || "flag"} className="pokemon-image"/>
             </figure>
-            <h1 className="pokemon_h1">{curElem.name.common}</h1>
+            <h1 className="pokemon_h1">
+  {
+    curElem.name.common.length > 25
+      ? curElem.name.common.slice(0, 25) + "..."
+      : curElem.name.common
+  }
+</h1>
+
             <div>
                 <p className="pokemon-info">
                     <span> Capital : </span> {curElem.capital ? curElem.capital[0] : "N/A"}

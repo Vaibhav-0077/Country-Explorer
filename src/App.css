@@ -627,7 +627,7 @@ figure {
   }
 
   .pokemon_h1{
-    font-size: 29px;
+    font-size: 25px;
   }
 
   .pokemon-image {
@@ -641,7 +641,7 @@ figure {
 
     p, span {
         font-size: 1.4rem;
-        margin-left: 18px;
+        /* margin-left: 18px; */
     }
 } 
 
